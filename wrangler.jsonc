@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "broad-boat-bc33",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-24",
+  "rules": [{ "type": "Text", "globs": ["**/*.html"], "fallthrough": true }]
+}
