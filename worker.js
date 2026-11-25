@@ -1,8 +1,11 @@
 import HTML from './index.html';
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith('/downloads/')) {
+      return env.ASSETS.fetch(request);
+    }
     if (url.pathname !== '/' && url.pathname !== '/index.html') {
       return new Response('Not found', {
         status: 404,

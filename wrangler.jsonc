@@ -3,5 +3,18 @@
   "name": "broad-boat-bc33",
   "main": "worker.js",
   "compatibility_date": "2026-11-24",
-  "rules": [{ "type": "Text", "globs": ["**/*.html"], "fallthrough": true }]
+  "rules": [
+    {
+      "type": "Text",
+      "globs": [
+        "**/*.html"
+      ],
+      "fallthrough": true
+    }
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  }
 }
